@@ -1,0 +1,43 @@
+.courses-container {
+  height: 100%;
+  padding: 20px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.courses-header {
+  flex-shrink: 0;
+  margin-bottom: 20px;
+}
+
+.courses-list {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.course-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 6px;
+}
+
+.course-id {
+  background: #e5e7eb;
+  padding: 6px;
+  border-radius: 4px;
+  margin-right: 12px;
+  font-size: 0.9rem;
+}
+
+.course-name {
+  font-weight: 500;
+}
+
+.course-grade {
+  font-size: 0.8rem;
+  color: #666;
+}

@@ -1,0 +1,81 @@
+.schedule-container {
+  height: 100%;
+  padding: 15px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.schedule-container h2 {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.schedule-list {
+  overflow-y: auto;
+  max-height: calc(100% - 50px);
+}
+
+.schedule-item {
+  display: flex;
+  padding: 10px;
+  margin-bottom: 8px;
+  background: #f8f9fa;
+  border-radius: 4px;
+}
+
+.time {
+  min-width: 80px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.details {
+  flex: 1;
+}
+
+.subject {
+  font-weight: 500;
+  color: #333;
+}
+
+.room {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.schedule-container {
+  height: 100%;
+  padding: 20px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.schedule-header {
+  flex-shrink: 0;
+  margin-bottom: 20px;
+}
+
+.schedule-list {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.schedule-item {
+  display: flex;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background: #f8f9fa;
+}
+
+.schedule-item:nth-child(odd) {
+  background: #fff1f2;
+}
+
+.schedule-item:nth-child(even) {
+  background: #f0fdf4;
+}

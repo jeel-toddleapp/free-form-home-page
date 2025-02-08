@@ -1,0 +1,61 @@
+.assignments-container {
+  height: 100%;
+  padding: 20px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.assignments-tabs {
+  flex-shrink: 0;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.assignments-tabs button {
+  padding: 8px 16px;
+  margin-right: 16px;
+  border: none;
+  background: none;
+  color: #666;
+  cursor: pointer;
+  position: relative;
+}
+
+.assignments-tabs button.active {
+  color: #1e3a8a;
+  font-weight: 500;
+}
+
+.assignments-tabs button.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #1e3a8a;
+}
+
+.assignment-item {
+  padding: 16px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  background: #f8f9fa;
+}
+
+.assignment-type {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  background: #e5e7eb;
+  margin-bottom: 8px;
+}
+
+.assignments-list {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 8px;
+}

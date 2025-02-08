@@ -1,0 +1,40 @@
+.modules-container {
+  height: 100%;
+  padding: 20px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.modules-header {
+  flex-shrink: 0;
+  margin-bottom: 20px;
+}
+
+.modules-list {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.module-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 6px;
+}
+
+.module-icon {
+  margin-right: 12px;
+  font-size: 1.2rem;
+}
+
+.module-name {
+  font-weight: 500;
+}
+
+.module-meta {
+  font-size: 0.8rem;
+  color: #666;
+}

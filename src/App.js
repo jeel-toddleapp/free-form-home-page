@@ -40,9 +40,17 @@ function App() {
           width={1400}
           margin={[16, 16]}
           isDraggable={true}
-          isResizable={true}
+          isResizable={false}
           onLayoutChange={onLayoutChange}
           draggableHandle=".drag-handle"
+          useCSSTransforms={true}
+          preventCollision={false}
+          showPlaceholders={true}
+          placeholder={{
+            backgroundColor: 'rgba(30, 58, 138, 0.1)',
+            border: '2px dashed #1e3a8a',
+            borderRadius: '12px'
+          }}
         >
           {/* Update each component wrapper to include drag handle */}
           <div key="schedule" className="grid-item">

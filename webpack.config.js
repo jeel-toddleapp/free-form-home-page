@@ -1,11 +1,12 @@
 const path = require('path');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: '/'
+    publicPath: './'
   },
   module: {
     rules: [
@@ -59,4 +60,11 @@ module.exports = {
     hot: true,
     historyApiFallback: true
   },
+  plugins: [
+    new CopyPlugin({
+      patterns: [
+        { from: 'public', to: '' }
+      ],
+    }),
+  ],
 };

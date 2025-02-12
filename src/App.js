@@ -24,8 +24,8 @@ function App() {
   ]);
   const [desktopLayout, setDesktopLayout] = useState([
     { i: 'schedule', x: 0, y: 0, w: 3, h: 12, minW: 2, maxW: 4, minH: 8, maxH: 16 },
-    { i: 'assignments', x: 3, y: 0, w: 6, h: 6, minW: 4, maxW: 8, minH: 4, maxH: 8 },
-    { i: 'courses', x: 3, y: 6, w: 3, h: 6, minW: 2, maxW: 4, minH: 4, maxH: 8 },
+    { i: 'assignments', x: 3, y: 0, w: 6, h: 6, minW: 4, maxW: 12, minH: 4, maxH: 8 },
+    { i: 'courses', x: 3, y: 6, w: 3, h: 6, minW: 2, maxW:12, minH: 4, maxH: 8 },
     { i: 'modules', x: 6, y: 6, w: 3, h: 6, minW: 2, maxW: 4, minH: 4, maxH: 8 },
     { i: 'quicklinks', x: 9, y: 0, w: 3, h: 12, minW: 2, maxW: 4, minH: 8, maxH: 16 },
     { i: 'todayEvent', x: 0, y: 12, w: 3, h: 4, minW: 2, maxW: 4, minH: 3, maxH: 6 }

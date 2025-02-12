@@ -23,6 +23,7 @@
   padding: 10px;
   background: #f8f9fa;
   border-radius: 6px;
+  margin-bottom: 8px;
 }
 
 .course-id {
@@ -40,4 +41,33 @@
 .course-grade {
   font-size: 0.8rem;
   color: #666;
+}
+
+/* Compact layout (< 336px) */
+.courses-list.compact .course-item {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.courses-list.compact .course-id {
+  margin-bottom: 8px;
+}
+
+/* Medium layout (336px - 800px) */
+.courses-list.medium .course-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+}
+
+/* Full layout (> 800px) */
+.courses-list.full .course-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 16px;
+  align-items: center;
+}
+
+.courses-list.full .course-grade {
+  text-align: right;
 }

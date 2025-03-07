@@ -10,6 +10,8 @@ import Modules from './components/Modules';
 import QuickLinks from './components/QuickLinks';
 import TodayEvent from './components/TodayEvent';
 import logoImage from './assets/logo.png';
+import ResizeHandle from './components/ResizeHandle';
+import ViewportWrapper from './components/ViewportWrapper';
 
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
@@ -17,7 +19,7 @@ const ResponsiveGridLayout = WidthProvider(Responsive);
 function App() {
   const initialLayouts = {
     lg: [
-      { i: 'schedule', x: 0, y: 0, w: 3, h: 12, minW: 2, maxW: 4, minH: 8, maxH: 16, static: true },
+      { i: 'schedule', x: 0, y: 0, w: 3, h: 12, minW: 2, maxW: 4, minH: 8, maxH: 16 },
       { i: 'assignments', x: 3, y: 0, w: 6, h: 6, minW: 4, maxW: 12, minH: 4, maxH: 8 },
       { i: 'courses', x: 3, y: 6, w: 3, h: 6, minW: 2, maxW: 12, minH: 4, maxH: 8 },
       { i: 'modules', x: 6, y: 6, w: 3, h: 6, minW: 2, maxW: 4, minH: 4, maxH: 8 },
@@ -71,31 +73,49 @@ function App() {
             border: '2px dashed #1e3a8a',
             borderRadius: '12px'
           }}
+          resizeHandle={<ResizeHandle />}
+          resizeHandles={['s', 'e', 'se','n','w','sw','ne','nw']}
         >
           {/* Update each component wrapper to include drag handle */}
-          <div key="schedule" className="grid-item">
-            <div className="drag-handle">⋮⋮</div>
-            <Schedule />
+          <div key="schedule" className="grid-item drag-handle">
+            <ViewportWrapper>
+              <Schedule />
+            </ViewportWrapper>
           </div>
-          <div key="assignments" className="grid-item">
-            <div className="drag-handle">⋮⋮</div>
-            <Assignments />
+          
+          <div key="assignments" className="grid-item drag-handle">
+            <ViewportWrapper>
+              <Assignments />
+            </ViewportWrapper>
           </div>
-          <div key="courses" className="grid-item">
-            <div className="drag-handle">⋮⋮</div>
+          
+          <div key="courses" className="grid-item drag-handle">
+            {/* <div className="drag-handle">⋮⋮</div> */}
+            <div>
             <Courses />
+            </div>
           </div>
-          <div key="modules" className="grid-item">
-            <div className="drag-handle">⋮⋮</div>
+          <div key="modules" className="grid-item drag-handle">
+            {/* <div className="drag-handle">⋮⋮</div> */}
+            <ViewportWrapper>
+
             <Modules />
+            </ViewportWrapper>
           </div>
-          <div key="quicklinks" className="grid-item">
-            <div className="drag-handle">⋮⋮</div>
+          <div key="quicklinks" className="grid-item drag-handle">
+            {/* <div className="drag-handle">⋮⋮</div> */}
+            <ViewportWrapper>
+
             <QuickLinks />
+            </ViewportWrapper>
           </div>
-          <div key="todayEvent" className="grid-item">
-            <div className="drag-handle">⋮⋮</div>
+          <div key="todayEvent" className="grid-item drag-handle">
+            {/* <div className="drag-handle">⋮⋮</div> */}
+            <ViewportWrapper>
+
             <TodayEvent />
+            </ViewportWrapper>
+
           </div>
         </ResponsiveGridLayout>
       </div>
